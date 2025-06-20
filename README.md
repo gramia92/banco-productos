@@ -19,6 +19,7 @@ Este proyecto es una aplicación Angular para la gestión de productos bancarios
 1. Clona este repositorio:
 
 git clone https://github.com/gramia92/banco-productos.git
+
 cd banco-productos
 
 npm install
