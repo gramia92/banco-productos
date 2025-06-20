@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="header">
+        <input type="text" placeholder="Buscar por nombre, descripción o ID" [(ngModel)]="searchTerm" />
+    </div>
+
+    <div class="table-wrapper">
+        <table class="products-table" *ngIf="filteredProducts.length > 0">
+            <thead>
+                <tr>
+                    <th>Logo</th>
+                    <th>Nombre del producto</th>
+                    <th>Descripción <span class="info-icon" title="Descripción del producto">ℹ️</span></th>
+                    <th>Fecha de liberación <span class="info-icon" title="Fecha en que se libera el producto">ℹ️</span>
+                    </th>
+                    <th>Fecha de reestructuración <span class="info-icon" title="Fecha de revisión o cambio">ℹ️</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of paginatedProducts">
+                    <td>
+                        <div class="avatar">
+                            <img *ngIf="product.logo" [src]="product.logo" alt="{{product.name}}" />
+                            <span *ngIf="!product.logo">{{ getInitials(product.name) }}</span>
+                        </div>
+                    </td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.date_release | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ product.date_revision | date: 'dd/MM/yyyy' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <span>{{filteredProducts.length}} Resultados</span>
+        <select [(ngModel)]="itemsPerPage">
+            <option [value]="5">5</option>
+            <option [value]="10">10</option>
+            <option [value]="20">20</option>
+        </select>
+    </div>
+</div>

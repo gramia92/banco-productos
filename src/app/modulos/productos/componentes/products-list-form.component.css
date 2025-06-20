@@ -1,0 +1,107 @@
+.container {
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.header input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  background: white;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  min-width: 600px;
+}
+
+.products-table thead tr {
+  background-color: #f0f4f8;
+  text-align: left;
+  font-weight: 600;
+  color: #344054;
+}
+
+.products-table th,
+.products-table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+.products-table th {
+  position: relative;
+}
+
+.info-icon {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 4px;
+  cursor: help;
+}
+
+.products-table tbody tr {
+  background: white;
+  box-shadow: 0 1px 2px rgb(16 24 40 / 0.05);
+  transition: background-color 0.3s;
+}
+
+.products-table tbody tr:hover {
+  background-color: #f0f4f8;
+}
+
+.products-table tbody td {
+  border-top: 1px solid #e0e6ed;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
